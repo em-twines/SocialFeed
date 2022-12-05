@@ -7,6 +7,11 @@ import Post from './Components/Post/Post.jsx'
 import PostList from './Components/PostList/PostList.jsx'
 import './App.css'
 
+
+//detect change on create post form only.
+
+
+
 function App() {
 
   const[posts, setPosts] = useState([{username: 'testUserName', content: "hello world."}, {username: 'testUserName1', content: "hello world again."}])
@@ -21,11 +26,11 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <div>
+      <div >
         {/* <NavBar displayNavBar =  */}
+        <div className = 'border-box'><Post username = {CreatePostForm.username} content = {CreatePostForm.content}/></div>
         <PostList previousPosts = {posts}/>
-        <CreatePostForm addNewPost = {addNewPost}/>
-        <Post/>
+        <div className = 'border-box'><CreatePostForm addNewPost = {addNewPost}/></div>
       </div>
 
 
