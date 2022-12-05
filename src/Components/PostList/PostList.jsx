@@ -10,19 +10,32 @@ import Post from '../../Components/Post/Post.jsx'
 //passed: all previous posts
 
 const PostList = (props) => {
-
-        
-
-        return (  
-
-            <div>
-                <h2>Posts</h2>
-                <div>{newPost}</div>
-                <div>{posts}</div>
+    let posts; 
+    posts = props.previousPosts.map(function(el, index){
+        return(
+            <div key = {index}>
+                {index+= 1}
+                <div>{el.username}</div>
+                <div>{el.content}</div>
             </div>
+            )
+        })
+    
+    
+    if (Post){
 
-        );
     }
+    
+
+    return (  
+
+        <div>
+            <h2>Posts</h2>
+            <div>newPost</div>
+            <div>{posts}</div>
+        </div>
+
+    );
 }
  
 export default PostList;

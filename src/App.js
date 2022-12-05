@@ -23,9 +23,9 @@ function App() {
       </header>
       <div>
         {/* <NavBar displayNavBar =  */}
-  
         <PostList previousPosts = {posts}/>
         <CreatePostForm addNewPost = {addNewPost}/>
+        <Post/>
       </div>
 
 
