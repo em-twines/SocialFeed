@@ -10,14 +10,17 @@ import './App.css'
 
 //detect change on create post form only.
 
+//post inherits previous posts and new posts, postlist inherits post
 
 
 function App() {
 
+  
+
   const[posts, setPosts] = useState([{username: 'testUserName', content: "hello world."}, {username: 'testUserName1', content: "hello world again."}])
 
   function addNewPost(post){
-    let tempPost = [posts, post];
+    let tempPost = [...posts, post];
     setPosts(tempPost);
   }
 
@@ -28,7 +31,6 @@ function App() {
       </header>
       <div >
         {/* <NavBar displayNavBar =  */}
-        <div className = 'border-box'><Post username = {CreatePostForm.username} content = {CreatePostForm.content}/></div>
         <PostList previousPosts = {posts}/>
         <div className = 'border-box'><CreatePostForm addNewPost = {addNewPost}/></div>
       </div>

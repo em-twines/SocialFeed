@@ -8,6 +8,10 @@ import CreatePostForm from '../../Components/CreatePostForm/CreatePostForm.jsx'
 
 //returns handled and formatted username and content as well as like and dislike 
 
+
+//post (should) inherit previous posts and new posts, postlist inherits post
+
+
 const Post = (props) => {
 
 
@@ -18,8 +22,8 @@ const Post = (props) => {
         
         <p>{props.username}</p>
         <p>{props.content}</p>
-        <span><button>Like</button></span>
-        <span><button>Dislike</button></span>
+        <button>Like</button>
+        <button>Dislike</button>
 
     </div>
 
