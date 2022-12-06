@@ -13,19 +13,21 @@ const CreatePostForm = (props) => {
 
     const[username, setUsername] = useState('');
     const[content, setContent] = useState(''); 
-    
+    const[date, setDate] = useState(''); 
+
 
     function handleSubmit(event){
         event.preventDefault();
        let newPost = {
             username: username,
-            content: content
+            content: content,
+            date: date
         }
-
         console.log(newPost);
         props.addNewPost(newPost);
         setUsername('');
         setContent('');
+        setDate('');
 
     }
 
@@ -36,7 +38,8 @@ const CreatePostForm = (props) => {
 
  
         <form onSubmit ={handleSubmit} className = 'table'>
-            
+            <label className = 'date-label'>Date</label>
+            <input className = 'date' type = 'date' value = {date} onChange={(event) => setDate(event.target.value)}></input>
             <label className = 'name'>Name</label>
             <input className ='form-control username' type = 'text'  value={username} onChange={(event) => setUsername(event.target.value)}></input>
     

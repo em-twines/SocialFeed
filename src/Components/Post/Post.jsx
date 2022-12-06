@@ -30,6 +30,7 @@ const Post = (props) => {
 
     <div className = "screenWidth">
         <div className = 'container'>
+            <p className = 'date'>{props.date}</p>
             <p className = 'username'>{props.username}</p>
             <p className = 'content'>{props.content}</p>
         </div>

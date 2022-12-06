@@ -1,7 +1,8 @@
 .table{
     display: grid;
     grid-template-areas: 
-    'name username  username  username username username username create'
+    'date-label date blank blank blank blank blank blank'
+    'name username username  username username username username create'
     'post content content content content content content create'
     'post content content content content content content create';
     grid-auto-rows: 1fr;
@@ -48,5 +49,18 @@
     align-self: flex-end;
     justify-self: center;
 }
+.date{
+    display: flex; 
+    align-self: right;
+}
 
+.date-label{
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 550;
+    color: gray;
+    grid-area: date-label; 
+    justify-content: right;
+    padding: 1rem;
+}
 

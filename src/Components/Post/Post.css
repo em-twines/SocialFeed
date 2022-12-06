@@ -4,18 +4,20 @@
     display: grid;
     justify-content: space-around;
     grid-template-areas: 
-    'username username username username username' 
+    'username username username username date' 
     'content content content content content'
     'content content content content content';
 }
-
 
 
 .content{
     display: flex;
     grid-area: content;
 }
-
+.date {
+    display: flex;
+    grid-area: date;
+}
 .username{
     display: flex;
     grid-area: username;

@@ -15,7 +15,7 @@ const PostList = (props) => {
         {props.previousPosts.map((el) => {
             return (
             <div >
-                    <div><Post username = {el.username} content = {el.content}/></div>
+                    <div><Post username = {el.username} content = {el.content} date = {el.date}/></div>
             </div>
             );
         })}
