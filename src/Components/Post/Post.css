@@ -1,0 +1,69 @@
+
+
+.container{
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: 
+    'username username username username username' 
+    'content content content content content'
+    'content content content content content';
+    grid-auto-rows: 1fr;
+}
+
+
+
+.content{
+    display: flex;
+    grid-area: content;
+}
+
+.username{
+    display: flex;
+    grid-area: username;
+}
+
+
+.likes-container{
+    display: flex;
+    justify-content: flex-end; 
+    padding-right: 3rem;
+}
+
+
+.like:hover{
+    color:green;
+}  
+
+.like{
+    color:rgb(129, 128, 128);
+}
+.liked{
+    color:green;
+}  
+
+.disliked{
+    color:red;
+}  
+
+
+.dislike{
+    color:rgb(129, 128, 128);
+}
+
+.dislike:hover {
+    color:red;
+}
+
+.grey-color{
+    color: rgb(129, 128, 128);
+}
+
+.icon-size{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.button{
+    margin: .5rem;
+}

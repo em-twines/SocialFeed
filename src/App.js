@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm.jsx'
 import NavBar from './Components/NavBar/NavBar.jsx'
-import Post from './Components/Post/Post.jsx'
 import PostList from './Components/PostList/PostList.jsx'
 import './App.css'
 
@@ -30,9 +29,9 @@ function App() {
       <header className="App-header">
       </header>
       <div >
-        {/* <NavBar displayNavBar =  */}
-        <PostList previousPosts = {posts}/>
+        {<NavBar/>}
         <div className = 'border-box'><CreatePostForm addNewPost = {addNewPost}/></div>
+        <PostList previousPosts = {posts}/>
       </div>
 
 
