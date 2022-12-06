@@ -1,5 +1,4 @@
 import Post from "../../Components/Post/Post.jsx";
-import "./PostList.css";
 import "../../App.css";
 
 //addEntryForm : CreatePostForm :: DisplayEntries : PostList
@@ -12,12 +11,11 @@ const PostList = (props) => {
 
 
   return (
-    <div>
-        <h3>Posts</h3>
+    <div className = 'screenWidth'>
         {props.previousPosts.map((el) => {
             return (
-            <div className="border-box">
-                    <div className = 'border-box'><Post username = {el.username} content = {el.content}/></div>
+            <div >
+                    <div><Post username = {el.username} content = {el.content}/></div>
             </div>
             );
         })}

@@ -6,13 +6,25 @@
 
 }
 
+p{
+    font-size: 1.1rem;
+}
+
 .border-box{
+    display: flex; 
+    justify-content: stretch;
     border: 1px;
     border-style: solid;
-    border-color: black; 
+    border-color: grey;
     border-radius: 2rem;
     margin : 1rem; 
     padding: 2rem; 
+    width: 55vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    box-shadow: .2rem .2rem grey;
+    background-color: whitesmoke;
 }
 
 h2{
@@ -27,4 +39,13 @@ h3{
 .submit{
     border-radius: 45%;
     padding: 5% 10%;
+}
+
+.screenWidth{
+    width: 100%;
+}
+.line{
+    height: 1px;
+    background: black;
+    margin-bottom: 2rem; 
 }
