@@ -24,10 +24,14 @@ const CreatePostForm = (props) => {
             date: date
         }
         console.log(newPost);
-        props.addNewPost(newPost);
-        setUsername('');
-        setContent('');
-        setDate('');
+        if (username && content && date){
+            props.addNewPost(newPost);
+            setUsername('');
+            setContent('');
+            setDate('');
+        }
+        else(alert("Please complete all required fields."))
+    
 
     }
 

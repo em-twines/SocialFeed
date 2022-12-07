@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import './Post.css'
 import'../../App.css'; 
 //user's name, body of post, like and dislike buttons
@@ -12,15 +12,12 @@ const Post = (props) => {
     const [active, setActive] = useState(true);
     const [activeDislike, setActiveDislike] = useState(true);
 
-
-
         const handleClick = () => {
             setActive(!active);
             setActiveDislike(true); 
        
         }
-        
-            
+                    
         const handleClickDislike = () => {
             setActiveDislike(!activeDislike);
             setActive(true);
@@ -33,6 +30,7 @@ const Post = (props) => {
             <p className = 'date'>{props.date}</p>
             <p className = 'username'>{props.username}</p>
             <p className = 'content'>{props.content}</p>
+            
         </div>
         <div className = 'likes-container'>
 

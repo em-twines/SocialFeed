@@ -12,13 +12,14 @@ const PostList = (props) => {
 
   return (
     <div className = 'screenWidth'>
-        {props.previousPosts.map((el) => {
+        {props.previousPosts.map((el, index) => {
             return (
-            <div >
-                    <div><Post username = {el.username} content = {el.content} date = {el.date}/></div>
+            <div key = {index}>
+                <div><Post username = {el.username} content = {el.content} date = {el.date} key = {index}/></div>
             </div>
             );
         })}
+        
     </div>
   );
 };
